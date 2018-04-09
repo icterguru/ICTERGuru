@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity() {
                 var phoneUri = Uri.parse("tel:2157765846")
                 var callIntent = Intent(Intent.ACTION_DIAL, phoneUri)
                 startActivity(callIntent)
-
             }
 
             var emailButton = findViewById<Button>(R.id.emailMHButton)
@@ -39,18 +38,16 @@ class MainActivity : AppCompatActivity() {
                 emailIntent.putExtra(Intent.EXTRA_EMAIL, "mokter@gmail.com")
                 emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Test email from CollResume")
                 emailIntent.putExtra(Intent.EXTRA_TEXT, "Hello, MH, I really enjoyed your resume.... ")
-
                 startActivity(emailIntent)
+            }
 
 
-                println("Hey, you hit the Weather Forcast button ")
-
-                var moveToWeatherForcast = Intent(getApplicationContext(), WeatherActivity::class.java)
-
-                startActivity(moveToWeatherForcast)
-                println("You made it! ")
-
-
+            var weatherForcastButton = findViewById<Button>(R.id.weatherForcastButton)
+            weatherForcastButton.setOnClickListener(){
+            println("Hey, you hit the Weather Forcast button ")
+            var moveToWeatherForcast = Intent(getApplicationContext(), WeatherActivity::class.java)
+            startActivity(moveToWeatherForcast)
+            println("You made it! ")
             }
 
         }
