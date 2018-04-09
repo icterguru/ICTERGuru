@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ICTERGuru</string>
+    <string name="textView_weather">Local Weather</string>
+</resources>
